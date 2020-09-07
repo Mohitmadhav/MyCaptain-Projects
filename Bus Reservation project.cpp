@@ -1,6 +1,6 @@
-#include<iostream.h> 
-#include<stdlib>
-
+#include <iostream > 
+#include <string.h>
+#include<stdio.h>
 
 using namespace std;
 
@@ -269,7 +269,7 @@ while(1)
     <<"4.Buses Available. \n\t\t\t"
     <<"5.Exit";
 
-    cout<<"\n\t\t\tEnter your choice:-> ";
+    cout<<"\n\t\t\tEnter your choice: ";
     cin>>w;
 
   switch(w)

@@ -1,4 +1,4 @@
-#include <iostream > 
+#include <iostream> 
 #include <string.h>
 #include<stdio.h>
 
@@ -9,7 +9,6 @@ static int p = 0;
 class BusData
 
 {
-
   char busn[5], driver[10], arrival[5], depart[5], from[10], to[10], seat[8][4][10];
 
 public:
@@ -20,22 +19,18 @@ public:
   void show();
   void avail();
   void position(int i);
-
 }
 
 bus[10];
 
 void vline(char ch)
 {
-
   for (int i=80;i>0;i--)
   cout<<ch;
-
 }
 
 void BusData::install()
 {
-
   cout<<"Enter bus no: ";
   cin>>bus[p].busn;
 
@@ -57,7 +52,6 @@ void BusData::install()
   bus[p].empty();
 
   p++;
-
 }
 
 void BusData::allotment()
@@ -76,24 +70,18 @@ void BusData::allotment()
   {
     if(strcmp(bus[n].busn, number)==0)
     break;
-
   }
 
   while(n<=p)
 
   {
-
     cout<<"\nSeat Number: ";
     cin>>seat;
 
     if(seat>32)
-
-    {
-        cout<<"\nThere are only 32 seats available in this bus.";
-    }
-
+      cout<<"\nThere are only 32 seats available in this bus.";
+    
     else
-
     {
     if (strcmp(bus[n].seat[seat/4][(seat%4)-1], "Empty")==0)
 
@@ -106,11 +94,9 @@ void BusData::allotment()
     else
       cout<<"The seat no. is already reserved.\n";
       }
-
-      }
+  }
 
     if(n>p)
-
     {
       cout<<"Enter correct bus no.\n";
 
@@ -120,12 +106,10 @@ void BusData::allotment()
 
 
 void BusData::empty()
-
 {
   for(int i=0; i<8;i++)
   {
     for(int j=0;j<4;j++)
-
     {
       strcpy(bus[p].seat[i][j], "Empty");
     }
@@ -133,9 +117,7 @@ void BusData::empty()
 }
 
 void BusData::show()
-
 {
-
   int n;
 
   char number[5];
@@ -144,14 +126,12 @@ void BusData::show()
     cin>>number;
 
   for(n=0;n<=p;n++)
-
   {
     if(strcmp(bus[n].busn, number)==0)
     break;
   }
 
 while(n<=p)
-
 {
 
   vline('*');
@@ -170,7 +150,6 @@ while(n<=p)
   int a=1;
 
   for (int i=0; i<8; i++)
-
   {
     for(int j=0;j<4;j++)
     {
@@ -183,7 +162,6 @@ while(n<=p)
   }
 
   break;
-
   }
 
   if(n>p)
@@ -215,7 +193,8 @@ void BusData::position(int l)
 
           p++;
         }
-        else
+
+      else
         {
         cout.width(5);
         cout.fill(' ');
@@ -224,17 +203,13 @@ void BusData::position(int l)
         cout.fill(' ');
         cout<<bus[l].seat[i][j];
         }
-
       }
-
     }
-
+    
   cout<<"\n\nThere are "<<p<<" seats empty in Bus No: "<<bus[l].busn;
-
   }
 
 void BusData::avail()
-
 {
   for(int n=0;n<p;n++)
 
@@ -249,7 +224,6 @@ void BusData::avail()
     vline('*');
     vline('_');
   }
-
 }
 
 int main()

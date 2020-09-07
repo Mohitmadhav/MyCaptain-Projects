@@ -46,10 +46,10 @@ void BusData::install()
   cout<<"\nDeparture: ";
   cin>>bus[p].depart;
 
-  cout<<"\nFrom: \t\t\t";
+  cout<<"\nFrom: ";
   cin>>bus[p].from;
 
-  cout<<"\nTo: \t\t\t";
+  cout<<"\nTo: ";
   cin>>bus[p].to;
 
   bus[p].empty();

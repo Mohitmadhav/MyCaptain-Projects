@@ -1,17 +1,10 @@
-/* #include<bits/stdc++.h> could also be used instead of these
-but we used them to signify importance of each one of them*/
-
-#include <iostream>
-#include <conio.h>
-#include <cstdio>
-#include <string.h>
-#include <cstdlib>
+#include<bits/stdc++.h> 
 
 using namespace std;
 
 static int p = 0;
 
-class a
+class BusData
 
 {
 
@@ -38,7 +31,7 @@ void vline(char ch)
 
 }
 
-void a::install()
+void BusData::install()
 {
 
   cout<<"Enter bus no: ";
@@ -65,7 +58,7 @@ void a::install()
 
 }
 
-void a::allotment()
+void BusData::allotment()
 {
   int seat;
   char number[5];
@@ -124,7 +117,7 @@ void a::allotment()
   }
 
 
-void a::empty()
+void BusData::empty()
 
 {
   for(int i=0; i<8;i++)
@@ -137,7 +130,7 @@ void a::empty()
   }
 }
 
-void a::show()
+void BusData::show()
 
 {
 
@@ -196,7 +189,7 @@ while(n<=p)
 
 }
 
-void a::position(int l)
+void BusData::position(int l)
 
 {
 
@@ -238,7 +231,7 @@ void a::position(int l)
 
   }
 
-void a::avail()
+void BusData::avail()
 
 {
   for(int n=0;n<p;n++)
